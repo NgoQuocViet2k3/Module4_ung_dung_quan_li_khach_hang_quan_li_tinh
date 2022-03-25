@@ -1,7 +1,8 @@
 package com.codegym.cms.service;
 
 import com.codegym.cms.model.Customer;
+import com.codegym.cms.model.Province;
 
 public interface ICustomerService extends IGeneralService<Customer> {
-    boolean insertWithStoredProcedure(Customer customer);
+    Iterable<Customer> findAllByProvince(Province province);
 }
